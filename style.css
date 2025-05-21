@@ -1,0 +1,715 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/xolani_sodam_p2.png);
+    background-size: 60% auto;
+    background-position: right;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.container {
+    padding: 10px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-xs {
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    padding: 0 5px;
+}
+
+.logo-xs::before,
+.logo-xs::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+}
+
+.logo-xs::before {
+    top: -5px;
+    left: -5px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.logo-xs::after {
+    bottom: -5px;
+    right: -5px;
+    border-left: none;
+    border-top: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 15%;
+    font-size: 1.5rem;
+}
+
+.header-text h1 {
+    font-size: 3.5rem;
+    margin-top: 20px;
+}
+
+.header-text h1 span {
+    color: #ff004f;
+}
+
+/* About Section */
+#about {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+    min-width: 300px;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+    gap: 20px;
+}
+
+.tab-links {
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: width 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #b54769;
+    font-size: 1rem;
+}
+
+.tab-contents {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+/* Certificate Thumbnail Styles */
+.certifications{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.certificate-thumbnail {
+    position: relative;
+    width: 300px;
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.certificate-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.certificate-thumbnail:hover {
+    transform: scale(1.03);
+}
+
+.certificate-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.certificate-thumbnail:hover .certificate-overlay {
+    opacity: 1;
+}
+
+/* Modal Styles (matches your existing design) */
+.certificate-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    overflow: auto;
+}
+
+.modal-content {
+    position: relative;
+    margin: 5% auto;
+    width: 90%;
+    max-width: 900px;
+    height: 80vh;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fallback-message {
+    display: none;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        height: 60vh;
+        margin: 20% auto;
+    }
+
+    .certificate-thumbnail {
+        width: 100%;
+    }
+}
+
+/* Services Section */
+#services {
+    padding: 80px 0;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    background: #262626;
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.5s, background 0.5s;
+}
+
+.services-list div:hover {
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+.services-list div i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ff004f;
+}
+
+.services-list div:hover i {
+    color: #fff;
+}
+
+.services-list div h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.services-list div a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: transform 0.3s;
+}
+
+.services-list div:hover a {
+    transform: translateX(5px);
+}
+
+/* Portfolio Section */
+#portfolio {
+    padding: 80px 0;
+}
+/* Hide extra projects by default */
+/*.work.hidden {*/
+/*    display: none;*/
+/*}*/
+
+/* Animation for when projects appear */
+.work.show {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 0.9rem;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+.layer a:hover {
+    background: #080808;
+    color: #fff;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+.work-list:hover .work:not(:hover) .layer {
+    height: 0 !important;
+}
+
+.work-list:hover .work:not(:hover) img {
+    transform: none !important;
+}
+
+.btn {
+    display: inline-block;
+    margin: 50px auto;
+    padding: 14px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    /*background: #ff004f;*/
+    border: 1px solid #ff004f;
+    transition: background 0.3s, color 0.3s;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #ff004f;
+    color: #ffffff;
+}
+
+/* Contact Section */
+#contact {
+    padding: 80px 0 30px;
+}
+
+.contact-left {
+    flex-basis: 35%;
+    min-width: 300px;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-left p i {
+    color: #ff004f;
+    font-size: 1.5rem;
+}
+
+.social-icons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #ababab;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn.btn2 {
+    background: #ff004f;
+    border: 1px solid #ff004f;
+    margin-top: 20px;
+}
+
+.btn.btn2:hover {
+    background: #ff004f;
+    transform: scale(1.05); /* Makes button 5% larger */
+    box-shadow: 0 5px 15px rgba(255, 0, 79, 0.4); /* Adds glow effect */
+    transition: all 0.3s ease-out; /* Smooth transition */
+}
+
+.btn {
+    transition: all 0.3s ease-out;
+    transform: scale(1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 6px;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+#msg {
+    display: block;
+    margin-top: 20px;
+    color: #61b752;
+}
+/* Updated Footer Styles */
+footer {
+    background: #1a1a1a; /* Softer dark gray instead of pure black */
+    padding: 25px 0;
+    margin-top: 50px;
+    border-top: 1px solid #333; /* Subtle top border */
+}
+
+.copyright {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px;
+}
+
+.copyright p {
+    color: #ccc; /* Lighter text color */
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.copyright p::before,
+.copyright p::after {
+    content: "•";
+    color: #ff004f; /* Your accent color */
+    margin: 0 15px;
+    position: relative;
+    top: -1px;
+}
+
+/* Optional hover effect */
+.copyright:hover {
+    background: #222; /* Slightly lighter on hover */
+    transition: background 0.3s ease;
+}
+
+
+
+/* Mobile Menu */
+@media only screen and (max-width: 768px) {
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px; /* Space for close button */
+        z-index: 2;
+        transition: right 0.5s;
+        flex-direction: column;
+    }
+
+    /* Position the close button at top */
+    nav .fa-times {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    /* Ensure menu items start below close button */
+    nav ul li {
+        margin: 15px 25px;
+    }
+}
+nav .fa-bars, nav .fa-times {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .header-text {
+        margin-top: 100px;
+        font-size: 1.2rem;
+    }
+
+    .header-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .sub-title {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 25px;
+    }
+
+    nav .fa-bars, nav .fa-times {
+        display: block;
+    }
+
+    .about-col-1, .about-col-2, .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .tab-titles {
+        flex-wrap: wrap;
+    }
+
+    .services-list, .work-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header-text h1 {
+        font-size: 2rem;
+    }
+
+    .sub-title {
+        font-size: 1.8rem;
+    }
+
+    .tab-links {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
