@@ -149,7 +149,7 @@ nav ul li a:hover::after {
     width: 100%;
     border-radius: 15px;
     object-fit: cover;
-    margin-top: 80px;
+    margin-top: 20px;
 }
 
 .about-col-2 {
@@ -397,6 +397,10 @@ nav ul li a:hover::after {
 
     .about-col-1 img {
         max-height: 500px;
+        font-size: 3rem;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 20px;
     }
 
     .services-list div {
@@ -887,4 +891,10 @@ nav .fa-bars, nav .fa-times {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
+}
+.hero-text .typewriter {
+    font-size: 24px;
+    /*color: var(--dark-color);*/
+    margin-bottom: 30px;
+    height: 30px;
 }
