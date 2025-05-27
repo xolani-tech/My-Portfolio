@@ -8,6 +8,7 @@
 
 html {
     scroll-behavior: smooth;
+    max-width: 100%;
 }
 
 
@@ -15,6 +16,7 @@ body {
     background: #080808;
     color: #fff;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Header Styles */
