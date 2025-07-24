@@ -7,6 +7,8 @@
     <link rel="icon" href="./images/favicon.ico" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <div id="header">
@@ -50,7 +52,7 @@
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
-                    <p class="tab-links" onclick="opentab('certifications')">Certificate (ions)</p>
+                    <p class="tab-links" onclick="opentab('certifications')">Certificates</p>
                 </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
@@ -278,117 +280,115 @@
 
 <script>
     // Tab functionality
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+    document.addEventListener('DOMContentLoaded', function() {
+        const tablinks = document.getElementsByClassName("tab-links");
+        const tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
+        function opentab(tabname, event) {
+            for(let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for(let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
         }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
+
+        // Add click handlers to tabs
+        Array.from(tablinks).forEach(tab => {
+            tab.addEventListener('click', function(e) {
+                opentab(this.getAttribute('onclick').match(/'([^']+)'/)[1], e);
+            });
+        });
+
+        // Mobile menu functionality
+        const sidemenu = document.getElementById("sidemenu");
+        const menuOpenBtn = document.querySelector('.fa-bars');
+        const menuCloseBtn = document.querySelector('.fa-times');
+
+        function openmenu() {
+            sidemenu.style.right = "0";
         }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
 
-    // Mobile menu functionality
-    var sidemenu = document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-
-    // Contact form submission
-    const scriptURL = 'YOUR_GOOGLE_SCRIPT_URL' // Add your Google Script URL here
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent successfully"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                }, 5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-    })
-</script>
-<script>
-// Certificate Modal Functions
-function openCertificateModal(pdfPath) {
-const modal = document.getElementById('certificateModal');
-const pdfViewer = document.getElementById('pdfViewer');
-const pdfDownload = document.getElementById('pdfDownload');
-
-pdfViewer.src = pdfPath;
-pdfDownload.href = pdfPath;
-modal.style.display = 'block';
-document.body.style.overflow = 'hidden';
-
-// Show fallback if PDF embedding isn't supported
-if (!document.createElement('embed').type === 'application/pdf') {
-document.querySelector('.fallback-message').style.display = 'block';
-}
-}
-
-function closeCertificateModal() {
-const modal = document.getElementById('certificateModal');
-const pdfViewer = document.getElementById('pdfViewer');
-
-pdfViewer.src = '';
-modal.style.display = 'none';
-document.body.style.overflow = 'auto';
-}
-
-// Close modal when clicking outside content
-window.addEventListener('click', function(event) {
-const modal = document.getElementById('certificateModal');
-if (event.target === modal) {
-closeCertificateModal();
-}
-});
-</script>
-<script>
-    const typewriterElement = document.querySelector('.typewriter');
-    const phrases = [
-        "Great to finally meet you",
-        "Let's connect!!!",
-    ];
-    let phraseIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let isEnd = false;
-    function typeWriter() {
-        const currentPhrase = phrases[phraseIndex];
-        if (isDeleting) {
-            typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
-            charIndex++;
+        function closemenu() {
+            sidemenu.style.right = "-200px";
         }
-        if (!isDeleting && charIndex === currentPhrase.length) {
-            isEnd = true;
-            isDeleting = true;
-            setTimeout(typeWriter, 1500);
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            phraseIndex = (phraseIndex + 1) % phrases.length;
-            setTimeout(typeWriter, 500);
-        } else {
-            const speed = isDeleting ? 100 : 150;
-            setTimeout(typeWriter, speed);
+
+        if (menuOpenBtn && menuCloseBtn) {
+            menuOpenBtn.addEventListener('click', openmenu);
+            menuCloseBtn.addEventListener('click', closemenu);
         }
-    }
-    // Start the typewriter effect
-    setTimeout(typeWriter, 1000);
+
+
+        // Certificate Modal Functions
+        function openCertificateModal(pdfPath) {
+            const modal = document.getElementById('certificateModal');
+            const pdfViewer = document.getElementById('pdfViewer');
+            const pdfDownload = document.getElementById('pdfDownload');
+
+            if (modal && pdfViewer && pdfDownload) {
+                pdfViewer.src = pdfPath;
+                pdfDownload.href = pdfPath;
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeCertificateModal() {
+            const modal = document.getElementById('certificateModal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal when clicking outside content
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('certificateModal');
+            if (event.target === modal) {
+                closeCertificateModal();
+            }
+        });
+
+        // Typewriter effect
+        const typewriterElement = document.querySelector('.typewriter');
+        if (typewriterElement) {
+            const phrases = [
+                "Great to finally meet you",
+                "Let's connect!!!",
+            ];
+            let phraseIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function typeWriter() {
+                const currentPhrase = phrases[phraseIndex];
+                if (isDeleting) {
+                    typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+                
+                if (!isDeleting && charIndex === currentPhrase.length) {
+                    isDeleting = true;
+                    setTimeout(typeWriter, 1500);
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    setTimeout(typeWriter, 500);
+                } else {
+                    const speed = isDeleting ? 100 : 150;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+            
+            // Start the typewriter effect
+            setTimeout(typeWriter, 1000);
+        }
+    });
 </script>
 
 

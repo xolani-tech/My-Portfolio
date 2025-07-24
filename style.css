@@ -22,7 +22,7 @@ body {
 /* Header Styles */
 #header {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     background-image: url(images/xolani_sodam_p2.png);
     background-size: 50% auto;
     background-position: right;
@@ -118,15 +118,30 @@ nav ul li a:hover::after {
 .header-text {
     margin-top: 15%;
     font-size: 1.5rem;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
 }
 
 .header-text h1 {
     font-size: 3.5rem;
     margin-top: 20px;
+    line-height: 1.2;
 }
 
 .header-text h1 span {
     color: #ff004f;
+}
+
+.header-text p{
+    font-size: 500;
+    margin-bottom: 10px;
+}
+.typewriter{
+    font-size: 1.2rem;
+    height: 30px;
+    margin-top: 10px;
+    color: #ababab;
 }
 
 /* About Section */
@@ -167,8 +182,14 @@ nav ul li a:hover::after {
 
 .tab-titles {
     display: flex;
-    margin: 20px -420px 40px;
-    gap: 150px;
+    margin: 20px 0px 30px;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+}
+.tab-titles::-webkit-scrollbar{
+    display: none;
 }
 
 .tab-links {
@@ -176,7 +197,8 @@ nav ul li a:hover::after {
     font-weight: 500;
     cursor: pointer;
     position: relative;
-    padding-bottom: 8px;
+    padding-bottom: 8px 0;
+    white-space: nowrap;
 }
 
 .tab-links::after {
@@ -262,8 +284,7 @@ nav ul li a:hover::after {
 
 .certificate-thumbnail:hover .certificate-overlay {
     opacity: 1;
-}/* Keep all your existing styles as they are */
-/* Only add these media queries at the end of your CSS file */
+}
 
 @media only screen and (max-width: 768px) {
     /* Make tab titles fit mobile screens */
@@ -767,25 +788,18 @@ footer {
     font-size: 0.9rem;
     letter-spacing: 0.5px;
     margin: 0;
-    position: relative;
-    display: inline-block;
+    /* position: relative;
+    display: inline-block; */
 }
 
 .copyright p::before,
 .copyright p::after {
     content: "•";
-    color: #ff004f; /* Your accent color */
+    color: #ff004f; 
     margin: 0 15px;
     position: relative;
     top: -1px;
 }
-
-/* Optional hover effect */
-.copyright:hover {
-    background: #222; /* Slightly lighter on hover */
-    transition: background 0.3s ease;
-}
-
 
 
 /* Mobile Menu */
@@ -825,13 +839,21 @@ nav .fa-bars, nav .fa-times {
 
 /* Responsive Design */
 @media only screen and (max-width: 768px) {
-    .header-text {
-        margin-top: 100px;
-        font-size: 1.2rem;
+    #header {
+        background-image: none;
+        min-height: auto;
+        padding-bottom: 60px;
     }
 
-    .header-text h1 {
-        font-size: 2.5rem;
+    .header-text {
+       margin-top: 100px;
+       text-align: center;
+    }
+    .header-text h1{
+        font-size: 2rem;
+    }
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
     }
 
     .sub-title {
@@ -869,6 +891,7 @@ nav .fa-bars, nav .fa-times {
 
     .tab-titles {
         flex-wrap: wrap;
+        gap: 15px;
     }
 
     .services-list, .work-list {
