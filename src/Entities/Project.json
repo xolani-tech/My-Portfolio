@@ -1,0 +1,52 @@
+{
+  "name": "Project",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Project name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the project"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Project thumbnail image URL"
+    },
+    "technologies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Technologies used"
+    },
+    "live_url": {
+      "type": "string",
+      "description": "Live demo URL"
+    },
+    "github_url": {
+      "type": "string",
+      "description": "GitHub repository URL"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": true,
+      "description": "Show in main projects section"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "fullstack",
+        "frontend",
+        "backend",
+        "other"
+      ],
+      "default": "fullstack"
+    }
+  },
+  "required": [
+    "title",
+    "description"
+  ]
+}
