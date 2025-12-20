@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 // import { cn } from "@/lib/utils";
-import profileImage from "@assets/generated_images/professional_male_developer_portrait.png";
 
 const tabs = ["Skills", "Experience", "Education", "Certificates"];
 

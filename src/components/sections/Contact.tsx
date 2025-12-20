@@ -56,17 +56,17 @@ export default function Contact() {
             <div className="pt-6">
               <p className="text-muted-foreground mb-4">Connect with me</p>
               <div className="flex gap-4 mb-8">
-                <Button size="icon" variant="outline" className="border-white/10 hover:bg-white/10 text-muted-foreground hover:text-white rounded-xl w-12 h-12">
+                <button size="icon" variant="outline" className="border-white/10 hover:bg-white/10 text-muted-foreground hover:text-white rounded-xl w-12 h-12">
                   <Linkedin />
-                </Button>
-                <Button size="icon" variant="outline" className="border-white/10 hover:bg-white/10 text-muted-foreground hover:text-white rounded-xl w-12 h-12">
+                </button>
+                <button size="icon" variant="outline" className="border-white/10 hover:bg-white/10 text-muted-foreground hover:text-white rounded-xl w-12 h-12">
                   <Github />
-                </Button>
+                </button>
               </div>
               
-              <Button size="lg" className="w-full sm:w-auto rounded-full bg-primary text-primary-foreground font-bold hover:bg-primary/90">
+              <button size="lg" className="w-full sm:w-auto rounded-full bg-primary text-primary-foreground font-bold hover:bg-primary/90">
                 Download CV
-              </Button>
+              </button>
             </div>
           </motion.div>
 
@@ -80,20 +80,20 @@ export default function Contact() {
             <form className="space-y-6">
               <div className="space-y-2">
                 <label className="text-sm text-muted-foreground">Name</label>
-                <Input placeholder="Your name" className="bg-white/5 border-white/10 focus:border-primary/50 text-white h-12 rounded-xl" />
+                <input placeholder="Your name" className="bg-white/5 border-white/10 focus:border-primary/50 text-white h-12 rounded-xl" />
               </div>
               <div className="space-y-2">
                 <label className="text-sm text-muted-foreground">Email</label>
-                <Input placeholder="your@email.com" className="bg-white/5 border-white/10 focus:border-primary/50 text-white h-12 rounded-xl" />
+                <input placeholder="your@email.com" className="bg-white/5 border-white/10 focus:border-primary/50 text-white h-12 rounded-xl" />
               </div>
               <div className="space-y-2">
                 <label className="text-sm text-muted-foreground">Message</label>
-                <Textarea placeholder="Tell me about your opportunity..." className="bg-white/5 border-white/10 focus:border-primary/50 text-white min-h-[150px] rounded-xl resize-none" />
+                <textarea placeholder="Tell me about your opportunity..." className="bg-white/5 border-white/10 focus:border-primary/50 text-white min-h-[150px] rounded-xl resize-none" />
               </div>
               
-              <Button size="lg" className="w-full rounded-full bg-primary text-primary-foreground font-bold hover:bg-primary/90 h-12 text-base">
+              <button size="lg" className="w-full rounded-full bg-primary text-primary-foreground font-bold hover:bg-primary/90 h-12 text-base">
                 <Send className="mr-2 h-4 w-4" /> Send Message
-              </Button>
+              </button>
             </form>
           </motion.div>
         </div>
