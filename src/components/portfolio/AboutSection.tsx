@@ -62,7 +62,6 @@ export default function AboutSection() {
     <section id="about" className="py-24 bg-slate-900">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
