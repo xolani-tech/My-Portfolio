@@ -66,7 +66,6 @@ export default function About() {
           >
             <div className="absolute inset-0 bg-primary/20 rounded-3xl translate-x-4 translate-y-4 -z-10" />
             <div className="aspect-square rounded-3xl overflow-hidden bg-muted border border-white/10">
-              <img src={profileImage} alt="Xolani Sodam" className="w-full h-full object-cover" />
             </div>
             <div className="absolute bottom-6 right-6">
               <span className="bg-primary text-primary-foreground px-4 py-2 rounded-full font-bold text-sm shadow-lg">Available for Work</span>
