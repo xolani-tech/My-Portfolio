@@ -62,11 +62,23 @@ export default function Contact() {
               <p className="text-muted-foreground mb-4">Connect with me</p>
               <div className="flex gap-4 mb-8">
                 {/* LinkedIn */}
+                  <a
+    href="https://www.linkedin.com/in/xolanisodam/"
+    target="_blank"
+    rel="noopener noreferrer"
+  ></a>
+
                 <button className="border border-white/10 hover:bg-white/10 text-muted-foreground hover:text-white rounded-xl w-12 h-12 flex items-center justify-center">
                   <Linkedin />
                 </button>
 
                 {/* GitHub */}
+                    <a
+    href="https://github.com/xolani-tech"
+    target="_blank"
+    rel="noopener noreferrer"
+  ></a>
+
                 <button className="border border-white/10 hover:bg-white/10 text-muted-foreground hover:text-white rounded-xl w-12 h-12 flex items-center justify-center">
                   <Github />
                 </button>
@@ -96,7 +108,7 @@ export default function Contact() {
               <div className="space-y-2">
                 <label className="text-sm text-muted-foreground">Email</label>
                 <input
-                  placeholder="your@email.com"
+                  placeholder="your@gmail.com"
                   className="bg-white/5 border-white/10 focus:border-primary/50 text-white h-12 rounded-xl"
                 />
               </div>
