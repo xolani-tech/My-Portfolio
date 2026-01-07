@@ -28,28 +28,28 @@ export default function Footer() {
 
             <span className="text-slate-400 text-sm">
               © {currentYear} Xolani Sodam. Made with{' '}
-              <Heart className="w-4 h-4 inline text-cyan-400" /> in Cape Town
+              <Heart className="w-4 h-4 inline text-red-400" /> in Cape Town
             </span>
           </div>
 
           <div className="flex items-center gap-4">
             <a
-              href="#"
-              className="text-slate-400 hover:text-cyan-400 transition-colors"
+              href="https://www.linkedin.com/in/xolanisodam/"
+              className="text-slate-400 hover:text-red-400 transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="#"
-              className="text-slate-400 hover:text-cyan-400 transition-colors"
+              href="https://www.github.com/xolani-tech"
+              className="text-slate-400 hover:text-red-400 transition-colors"
               aria-label="GitHub"
             >
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="mailto:xolanisodam@gmail.com"
-              className="text-slate-400 hover:text-cyan-400 transition-colors"
+              href="mailto:jonathanmicah23@gmail.com"
+              className="text-slate-400 hover:text-red-400 transition-colors"
               aria-label="Email"
             >
               <Mail className="w-5 h-5" />

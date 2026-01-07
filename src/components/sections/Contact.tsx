@@ -62,11 +62,6 @@ export default function Contact() {
               <p className="text-muted-foreground mb-4">Connect with me</p>
               <div className="flex gap-4 mb-8">
                 {/* LinkedIn */}
-                  <a
-    href="https://www.linkedin.com/in/xolanisodam/"
-    target="_blank"
-    rel="noopener noreferrer"
-  ></a>
 
                 <button className="border border-white/10 hover:bg-white/10 text-muted-foreground hover:text-white rounded-xl w-12 h-12 flex items-center justify-center">
                   <Linkedin />
@@ -74,9 +69,7 @@ export default function Contact() {
 
                 {/* GitHub */}
                     <a
-    href="https://github.com/xolani-tech"
-    target="_blank"
-    rel="noopener noreferrer"
+
   ></a>
 
                 <button className="border border-white/10 hover:bg-white/10 text-muted-foreground hover:text-white rounded-xl w-12 h-12 flex items-center justify-center">

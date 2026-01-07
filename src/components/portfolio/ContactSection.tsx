@@ -45,10 +45,12 @@ export default function Contact() {
             ))}
 
             <div className="flex gap-4 pt-4">
-              <a className="w-12 h-12 rounded-xl border border-slate-800 flex items-center justify-center hover:bg-slate-800 text-slate-400 hover:text-white transition">
+              <a href="https://www.linkedin.com/in/xolanisodam/"
+              className="w-12 h-12 rounded-xl border border-slate-800 flex items-center justify-center hover:bg-slate-800 text-slate-400 hover:text-white transition">
                 <Linkedin />
               </a>
-              <a className="w-12 h-12 rounded-xl border border-slate-800 flex items-center justify-center hover:bg-slate-800 text-slate-400 hover:text-white transition">
+              <a href="https://github.com/xolani-tech"
+              className="w-12 h-12 rounded-xl border border-slate-800 flex items-center justify-center hover:bg-slate-800 text-slate-400 hover:text-white transition">
                 <Github />
               </a>
               <a
