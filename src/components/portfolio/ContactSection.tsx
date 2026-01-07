@@ -45,11 +45,11 @@ export default function Contact() {
             ))}
 
             <div className="flex gap-4 pt-4">
-              <a href="https://www.linkedin.com/in/xolanisodam/"
+              <a href="https://www.linkedin.com/in/xolanisodam/"  target="_blank" rel="noopener noreferrer"
               className="w-12 h-12 rounded-xl border border-slate-800 flex items-center justify-center hover:bg-slate-800 text-slate-400 hover:text-white transition">
                 <Linkedin />
               </a>
-              <a href="https://github.com/xolani-tech"
+              <a href="https://github.com/xolani-tech" target="_blank" rel="noopener noreferrer"
               className="w-12 h-12 rounded-xl border border-slate-800 flex items-center justify-center hover:bg-slate-800 text-slate-400 hover:text-white transition">
                 <Github />
               </a>
@@ -105,7 +105,7 @@ export default function Contact() {
                     type="email"
                     name="email"
                     required
-                    placeholder="your@email.com"
+                    placeholder="your@gmail.com"
                     className="w-full h-12 rounded-xl bg-slate-900/60 border border-slate-800 px-4 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-red-500"
                   />
                   <ValidationError prefix="Email" field="email" errors={state.errors} />

@@ -34,21 +34,24 @@ export default function Footer() {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://www.linkedin.com/in/xolanisodam/"
+              href="https://www.linkedin.com/in/xolanisodam/" target="_blank"
+    rel="noopener noreferrer"
               className="text-slate-400 hover:text-red-400 transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="https://www.github.com/xolani-tech"
+              href="https://www.github.com/xolani-tech" target="_blank"
+    rel="noopener noreferrer"
               className="text-slate-400 hover:text-red-400 transition-colors"
               aria-label="GitHub"
             >
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="mailto:jonathanmicah23@gmail.com"
+              href="mailto:jonathanmicah23@gmail.com" target="_blank"
+    rel="noopener noreferrer"
               className="text-slate-400 hover:text-red-400 transition-colors"
               aria-label="Email"
             >
