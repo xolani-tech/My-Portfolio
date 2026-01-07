@@ -73,7 +73,7 @@ export default function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-teal-500/20 rounded-3xl transform rotate-6" />
               <div className="absolute inset-0 bg-slate-800 rounded-3xl overflow-hidden">
                 <img
-                  src="./src\assets\professional photo.jpg"
+                  src="./public/images/professional photo.jpg"
                   alt="Xolani Sodam"
                   className="w-full h-full object-cover opacity-80"
                 />
