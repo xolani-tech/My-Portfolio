@@ -38,21 +38,24 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button 
-            size="lg" 
-            className="rounded-full px-8 py-6 text-lg bg-primary text-primary-foreground hover:bg-primary/90 font-semibold shadow-lg shadow-primary/25"
-            onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            View My Work
-          </button>
-          <button 
-            size="lg" 
-            variant="outline"
-            className="rounded-full px-8 py-6 text-lg border-white/20 text-white hover:bg-white/10 hover:text-white font-medium"
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            Get In Touch
-          </button>
+<button
+  className="rounded-full px-8 h-14 text-lg bg-primary text-primary-foreground hover:bg-primary/90 font-semibold shadow-lg shadow-primary/25"
+  onClick={() =>
+    document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })
+  }
+>
+  View My Work
+</button>
+
+<button
+  className="rounded-full px-8 h-14 text-lg border border-white/20 text-white hover:bg-white/10 font-medium"
+  onClick={() =>
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+  }
+>
+  Contact Me
+</button>
+
         </div>
       </motion.div>
 

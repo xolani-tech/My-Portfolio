@@ -89,16 +89,16 @@ export default function About() {
             {/* Tabs */}
             <div className="flex flex-wrap gap-2 mb-6">
               {tabs.map((tab) => (
-                <button
-                  key={tab}
-                  onClick={() => setActiveTab(tab)}
-                  className={cn(
-                    "px-6 py-2 rounded-full text-sm font-medium transition-all duration-300",
-                    activeTab === tab 
-                      ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20" 
-                      : "bg-white/5 text-muted-foreground hover:text-white hover:bg-white/10"
-                  )}
-                >
+<button
+  key={tab}
+  onClick={() => setActiveTab(tab)}
+  className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+    activeTab === tab
+      ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
+      : "bg-white/5 text-muted-foreground hover:text-white hover:bg-white/10"
+  }`}
+>
+
                   {tab}
                 </button>
               ))}

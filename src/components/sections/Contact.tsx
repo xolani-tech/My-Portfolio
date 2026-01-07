@@ -9,9 +9,12 @@ export default function Contact() {
     <section id="contact" className="py-24 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">Get In <span className="text-primary">Touch</span></h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
+            Get In <span className="text-primary">Touch</span>
+          </h2>
           <p className="text-muted-foreground">
-            I'm currently looking for junior developer roles or internship opportunities. Let's connect!
+            I'm currently looking for junior developer roles or internship
+            opportunities. Let's connect!
           </p>
         </div>
 
@@ -49,22 +52,27 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Location</p>
-                <p className="text-white font-medium">Cape Town, South Africa</p>
+                <p className="text-white font-medium">
+                  Cape Town, South Africa
+                </p>
               </div>
             </div>
 
             <div className="pt-6">
               <p className="text-muted-foreground mb-4">Connect with me</p>
               <div className="flex gap-4 mb-8">
-                <button size="icon" variant="outline" className="border-white/10 hover:bg-white/10 text-muted-foreground hover:text-white rounded-xl w-12 h-12">
+                {/* LinkedIn */}
+                <button className="border border-white/10 hover:bg-white/10 text-muted-foreground hover:text-white rounded-xl w-12 h-12 flex items-center justify-center">
                   <Linkedin />
                 </button>
-                <button size="icon" variant="outline" className="border-white/10 hover:bg-white/10 text-muted-foreground hover:text-white rounded-xl w-12 h-12">
+
+                {/* GitHub */}
+                <button className="border border-white/10 hover:bg-white/10 text-muted-foreground hover:text-white rounded-xl w-12 h-12 flex items-center justify-center">
                   <Github />
                 </button>
               </div>
-              
-              <button size="lg" className="w-full sm:w-auto rounded-full bg-primary text-primary-foreground font-bold hover:bg-primary/90">
+
+              <button className="w-full sm:w-auto rounded-full bg-primary text-primary-foreground font-bold hover:bg-primary/90 h-12 px-6">
                 Download CV
               </button>
             </div>
@@ -80,18 +88,27 @@ export default function Contact() {
             <form className="space-y-6">
               <div className="space-y-2">
                 <label className="text-sm text-muted-foreground">Name</label>
-                <input placeholder="Your name" className="bg-white/5 border-white/10 focus:border-primary/50 text-white h-12 rounded-xl" />
+                <input
+                  placeholder="Your name"
+                  className="bg-white/5 border-white/10 focus:border-primary/50 text-white h-12 rounded-xl"
+                />
               </div>
               <div className="space-y-2">
                 <label className="text-sm text-muted-foreground">Email</label>
-                <input placeholder="your@email.com" className="bg-white/5 border-white/10 focus:border-primary/50 text-white h-12 rounded-xl" />
+                <input
+                  placeholder="your@email.com"
+                  className="bg-white/5 border-white/10 focus:border-primary/50 text-white h-12 rounded-xl"
+                />
               </div>
               <div className="space-y-2">
                 <label className="text-sm text-muted-foreground">Message</label>
-                <textarea placeholder="Tell me about your opportunity..." className="bg-white/5 border-white/10 focus:border-primary/50 text-white min-h-[150px] rounded-xl resize-none" />
+                <textarea
+                  placeholder="Tell me about your opportunity..."
+                  className="bg-white/5 border-white/10 focus:border-primary/50 text-white min-h-[150px] rounded-xl resize-none"
+                />
               </div>
-              
-              <button size="lg" className="w-full rounded-full bg-primary text-primary-foreground font-bold hover:bg-primary/90 h-12 text-base">
+
+              <button className="w-full rounded-full bg-primary text-primary-foreground font-bold hover:bg-primary/90 h-12 text-base flex items-center justify-center">
                 <Send className="mr-2 h-4 w-4" /> Send Message
               </button>
             </form>
