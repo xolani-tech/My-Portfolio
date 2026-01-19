@@ -12,7 +12,6 @@ const badges = [
   { id: 5, image: "images/networking-basics.png", name: "Cisco" },
   { id: 6, image: "images/networking-devices-and-initial-configuration.png", name: "Cisco" },
   { id: 7, image: "images/aws.png", name: "AWS" },
-
 ];
 
 export default function BadgeStrip() {
