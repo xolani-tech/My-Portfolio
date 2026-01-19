@@ -41,6 +41,7 @@ const tabContent = {
     }
   ],
   education: [
+    { period: '2026', title: 'AfricaRouting', details: 'Training in Bitcoin and lightning Bitcoin development'},
     { period: '2025', title: 'StellieTech', details: 'Trained in Data Science and Data analysis '},
     { period: '2025', title: 'LC Studio', details: 'Continued advanced development training' },
     { period: '2024', title: 'LC Academy', details: 'Fullstack Web Developer Certificate' },
@@ -49,6 +50,7 @@ const tabContent = {
   certificates: [
     
     { title: 'Cybersecurity Certification', issuer: 'Cisco Academy' },
+    { title: 'FullStack Web developer', issuer: 'Life Choices Academy'},
     { title:  'Data Science Certificate', issuer: 'StellieTech'},
     { title: 'Data Science Certification', issuer: 'Cisco Academy' },
     { title: 'IBM Cloud Essentials', issuer: 'IBM' },
