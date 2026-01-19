@@ -5,7 +5,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 const badges = [
-  { id: 1, image: "images/Life Choices Academy - SCRUM Project Planning & Agile Fundamentals - 2025-03-16.png", name: "Scrum" },
+  { id: 1, image: "/images/Life Choices Academy - SCRUM Project Planning & Agile Fundamentals - 2025-03-16.png", name: "Scrum" },
   { id: 2, image: "images/Life Choices Academy - UIUX Design Foundations & Practice - 2025-04-17.png", name: "UI/UX" },
   { id: 3, image: "images/Life Choices Academy - WordPress Site Builder Portfolio Edition - 2025-05-09.png", name: "Wordpress" },
   { id: 4, image: "images/Life Choices Academy - Real-Time Systems Developer - 2025-04-23 (1).png", name: "Real Systems" },
