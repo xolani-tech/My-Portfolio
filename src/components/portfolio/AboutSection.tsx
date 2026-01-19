@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Badgestrip from "../portfolio/couresel";
 
 const tabs = [
   { id: 'skills', label: 'Skills' },
@@ -148,9 +149,15 @@ export default function AboutSection() {
                 </div>
               ))}
             </motion.div>
+
           </motion.div>
         </div>
       </div>
+      { /*  Badges */}
+      <div 
+      className ="p-2"
+      />
+        <Badgestrip />
     </section>
   );
 }

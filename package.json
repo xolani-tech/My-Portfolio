@@ -12,12 +12,15 @@
   "dependencies": {
     "@formspree/react": "^3.0.0",
     "@tanstack/react-query": "^5.90.12",
+    "autoplay": "^0.0.4",
     "framer-motion": "^12.23.26",
     "lucide-react": "^0.561.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.10.1",
     "react-simple-typewriter": "^5.0.1",
+    "swift": "^2.8.0",
+    "swiper": "^12.0.3",
     "typewriter": "^9.2.0",
     "wouter": "^3.8.1"
   },
