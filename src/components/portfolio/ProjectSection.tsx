@@ -39,7 +39,7 @@ const featuredProjects = [
 const additionalProjects = [
   {
     id: 4,
-    title: 'Blog Landing page',
+    // title: 'Blog Landing page',
     description: 'A Blog page designed to improve skill in terms of User experience and interface as well. ',
     image: [ '/images/about-blog-page.png'],
     technologies: ['HTML', 'CSS', 'JavaScript'],
@@ -51,7 +51,7 @@ const additionalProjects = [
      id: 5,
     title: 'SplitSpark',
     description: 'SplitSpark – A multi-currency payment splitter built on Bitcoin Lightning. SplitSpark allows groups of people to contribute in different currencies toward any shared expense, product, or service, anywhere in the world. Each participant enters their share in their preferred currency, and the system instantly converts the total to Bitcoin and transfers it directly to the recipient in their desired currency via the MavaPay API. By using Bitcoin Lightning, payments are processed at high speed before market fluctuations occur, removing the need for traditional banking intermediaries like SWIFT. SplitSpark makes cross-border, multi-currency transactions seamless, fast, and reliable.. ',
-    image: [ '/images/about-blog-page.png'],
+    image: [ '/images/splitspark-2.png'],
     technologies: ['Next.js', 'Tailwind CSS', 'Typescript', 'Node.js', 'Mavapay API'],
     category: 'Frontend, Backend, Mavapay API integration',
     liveUrl: '',
