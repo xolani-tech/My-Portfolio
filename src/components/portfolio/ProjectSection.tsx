@@ -55,7 +55,7 @@ const additionalProjects = [
     technologies: ['Next.js', 'Tailwind CSS', 'Typescript', 'Node.js', 'Mavapay API'],
     category: 'Frontend, Backend, Mavapay API integration',
     liveUrl: '',
-    githubUrl: 'https://github.com/xolani-tech/SplitSpark'
+    githubUrl: 'https://github.com/Shaun-Adams/SplitSpark'
   },
   
 ];
