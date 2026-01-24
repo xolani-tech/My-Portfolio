@@ -47,6 +47,16 @@ const additionalProjects = [
     liveUrl: 'https://xolani-tech.github.io/Blog-Landing-Page/index.html',
     githubUrl: 'https://github.com/xolani-tech/Blog-Landing-Page'
   },
+  {
+     id: 5,
+    title: 'SplitSpark',
+    description: 'SplitSpark – A multi-currency payment splitter built on Bitcoin Lightning. SplitSpark allows groups of people to contribute in different currencies toward any shared expense, product, or service, anywhere in the world. Each participant enters their share in their preferred currency, and the system instantly converts the total to Bitcoin and transfers it directly to the recipient in their desired currency via the MavaPay API. By using Bitcoin Lightning, payments are processed at high speed before market fluctuations occur, removing the need for traditional banking intermediaries like SWIFT. SplitSpark makes cross-border, multi-currency transactions seamless, fast, and reliable.. ',
+    image: [ '/images/about-blog-page.png'],
+    technologies: ['Next.js', 'Tailwind CSS', 'Typescript', 'Node.js', 'Mavapay API'],
+    category: 'Frontend, Backend, Mavapay API integration',
+    liveUrl: '',
+    githubUrl: 'https://github.com/xolani-tech/SplitSpark'
+  },
   
 ];
 
