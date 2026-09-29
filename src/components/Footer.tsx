@@ -9,9 +9,6 @@ export default function Footer() {
     <footer className="border-t border-line py-10">
       <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <p className="font-mono text-xs text-ink-muted">
-          © {new Date().getFullYear()} {site.name}
-        </p>
-        <p className="font-mono text-xs text-ink-muted">
           <InlineText text={credit} variant="subtle" />
         </p>
       </div>
