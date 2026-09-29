@@ -11,6 +11,11 @@ node_modules
 dist
 dist-ssr
 *.local
+*.tsbuildinfo
+
+# Env files (secrets live here, e.g. the Formspree form ID)
+.env*
+!.env.example
 
 # Editor directories and files
 .vscode/*
