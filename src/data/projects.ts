@@ -14,7 +14,7 @@ export const projects: Project[] = [
     ],
     tags: [],
     liveUrl: "https://njoan.org",
-    image: "/images/projects/church-website.png",
+    image: "/images/projects/church-website.webp",
   },
   {
     id: "hr-management-system",
@@ -43,6 +43,7 @@ export const projects: Project[] = [
     tags: ["HTML", "CSS", "JavaScript"],
     liveUrl: "https://visio-elemental-challenge-iota.vercel.app",
     githubUrl: "https://github.com/xolani-tech/Visio-Elemental-challenge",
+    image: "/images/projects/visio-site-replica.webp",
   },
   {
     id: "blog-landing-page",
